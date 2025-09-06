@@ -1,0 +1,53 @@
+```xml
+<!-- ...existing code... -->
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main content -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Sidebar chat -->
+    <LinearLayout
+        android:id="@+id/chat_sidebar"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="עוזר קוד"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/chat_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="כתוב שאלה..." />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שלח" />
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
+<!-- ...existing code... -->
+```
